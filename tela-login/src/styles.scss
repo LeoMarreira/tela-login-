@@ -1,1 +1,74 @@
-/* You can add global styles to this file, and also import other style files */
+.wrapper{
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--black);
+    overflow: hidden;
+}
+
+.wrapper .form-box{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.wrapper .form-box.login{
+    left: 0;
+    padding: 0 60px 0 40px;
+
+}
+
+.wrapper .form-box.register .animation{
+    transform: trabslateX(120);
+    opacity: 0;
+    filter: blur(10px);
+    transition: 7s ease;
+    transition-delay: calc(.1s * var(--j));    
+
+}
+
+.wrapper.active .form-box.register .animation{
+    transform: trabslateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--i)); 
+
+}
+
+.wrapper .info-text.register{
+    left: 0;
+    text-align: left;
+    padding: 0 150px 60px 40px;
+    pointer-events: none; 
+
+}
+
+.wrapper .active .info-text.register{
+    pointer-events: auto;
+
+}
+
+.wraper .info-text.register .animation{
+    transform: trabslateX(120);
+    opacity: 0;
+    filter: blur(10px);
+    transition: 7s ease;
+    transition-delay: calc(.1s * var(--j)); 
+
+}
+
+.wrapper.active .info-text.register .animation{
+    transform: trabslateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--i));
+}
